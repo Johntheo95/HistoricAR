@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="KingsdomsSplit" size="1.000000 0.598837" />
+    <ImageTarget name="AlexanderRoadFull" size="1.000000 0.590580" />
     <ImageTarget name="descending" size="1.000000 1.188406" />
-    <ImageTarget name="img4_2" size="1.000000 0.591667" />
     <ImageTarget name="MAsia" size="1.000000 1.198653" />
     <ImageTarget name="img4_6" size="1.000000 0.631119" />
   </Tracking>
