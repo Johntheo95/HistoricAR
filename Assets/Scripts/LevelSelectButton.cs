@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelectButton : MonoBehaviour
 {
+    
 
     //[SerializeField]
     //private string sceneName;
     public string sceneName;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,6 @@ public class LevelSelectButton : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
 
 
     
