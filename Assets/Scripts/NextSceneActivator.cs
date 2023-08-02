@@ -28,15 +28,15 @@ public class NextSceneActivator : MonoBehaviour
 {      
          totalpages = PageText.textInfo.pageCount; 
          
-         Debug.Log(totalpages);
-         Debug.Log(PageText.pageToDisplay);  //This works
+        // Debug.Log(totalpages);
+        // Debug.Log(PageText.pageToDisplay);  //This works
          currentpage= PageText.pageToDisplay;
          if (currentpage == totalpages)
          {
             bool currentState = menuObject.activeSelf;
-            Debug.Log(currentState);
-                     Debug.Log(totalpages);
-         Debug.Log(PageText.pageToDisplay);  //This works
+           // Debug.Log(currentState);
+                //     Debug.Log(totalpages);
+       //  Debug.Log(PageText.pageToDisplay);  //This works
             menuObject.SetActive(!currentState);
         }
 }
