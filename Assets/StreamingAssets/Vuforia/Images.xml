@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="GreeceKef40" size="1.000000 1.034608" />
     <ImageTarget name="Rome-Anibas" size="1.000000 0.573460" />
     <ImageTarget name="KingsdomsSplit" size="1.000000 0.598837" />
     <ImageTarget name="AlexanderRoadFull" size="1.000000 0.590580" />
