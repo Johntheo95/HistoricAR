@@ -80,8 +80,36 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
             menuObject4.SetActive(!currentState4);
 
         }
-
-      
 }
+
+        
+        public void ShowNextModelVer3()
+{        
+         totalpages = PageText.textInfo.pageCount; 
+         bool currentState  =  menuObject.activeSelf;
+         bool currentState2 = menuObject2.activeSelf;
+         bool currentState3 = menuObject3.activeSelf;
+         bool currentState4 = menuObject4.activeSelf;
+         currentpage = PageText.pageToDisplay;
+         // Text2 =GetComponent<TextMeshProUGUI>();
+         
+         if (currentpage == TargetPage)
+         {
+           //Debug.Log("currentpage"+ currentpage);
+           //Debug.Log("menuObject"+ currentState);
+           //Debug.Log("menuObject2"+currentState2);
+            menuObject.SetActive(!currentState);
+            menuObject2.SetActive(!currentState2);
+            menuObject3.SetActive(!currentState3);
+        }
+
+        if (currentpage == TargetPage2)
+        {
+            menuObject4.SetActive(!currentState4);
+
+        }
+}
+
+
 
 }
