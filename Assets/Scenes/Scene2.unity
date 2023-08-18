@@ -560,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -58, y: -259}
+  m_AnchoredPosition: {x: -58, y: -234}
   m_SizeDelta: {x: 482, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!23 &567903911
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_text: "\u0391\u03A1\u0399\u03A3\u03A4\u039F\u039A\u03A1\u0391\u03A4\u0395\u0399\u0391  
     <page>   \u039F\u039B\u0399\u0393\u0391\u03A1\u03A7\u0395\u0399\u0391 <page>   
     \u0392\u0391\u03A3\u0399\u039B\u0395\u0399\u0391<page>\u0394\u0397\u039C\u039F\u039A\u03A1\u0391\u03A4\u0395\u0399\u0391<page> 
-    \u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
+    \u03A0\u0391\u03A4\u0397\u03A3\u03A4\u0395 \u0393\u0399\u0391   \u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -690,8 +690,8 @@ MonoBehaviour:
   m_IsTextObjectScaleStatic: 0
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 362.42215, y: -9.606764, z: 286.80634, w: -27.224289}
+  m_pageToDisplay: 5
+  m_margin: {x: 362.42215, y: -9.606764, z: 286.80634, w: -55.338432}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2131,7 +2131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3951978078463565705, guid: af3bb65fe7c638e4ab1f707e21f0a931, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3bb65fe7c638e4ab1f707e21f0a931, type: 3}
@@ -2994,7 +2994,7 @@ MonoBehaviour:
   m_IsTextObjectScaleStatic: 0
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 3
+  m_pageToDisplay: 1
   m_margin: {x: -102.97571, y: 8.979242, z: 143.58383, w: -155.42891}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3149,7 +3149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2060793387881724189, guid: 2d5e4f83f5f5fa048ae2e1ff92540619, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7201641815046947793, guid: 2d5e4f83f5f5fa048ae2e1ff92540619, type: 3}
       propertyPath: m_Pivot.x
