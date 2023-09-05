@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="colossusOfRhodes" size="10.000000 13.846154" />
     <ImageTarget name="Kef5" size="1.000000 0.470874" />
     <ImageTarget name="MakedoniaKef30" size="1.000000 1.134503" />
     <ImageTarget name="GreeceKef40" size="1.000000 1.034608" />

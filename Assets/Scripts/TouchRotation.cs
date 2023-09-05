@@ -6,7 +6,7 @@ public class TouchRotation : MonoBehaviour
 {
     private Touch touch;
     private Vector2 touchPosition;
-    private Quaternion rotationY;
+    private Quaternion rotationZ;
     private float rotationSpeedModifier = 0.2f;
     private float movementSpeedModifier = 0.001f;
 
@@ -24,7 +24,7 @@ public class TouchRotation : MonoBehaviour
         touch = Input.GetTouch(0);
         if(touch.phase == TouchPhase.Moved)
         {
-            rotationY = Quaternion.Euler(0f, -touch.deltaPosition.x * rotationSpeedModifier, 0f);
+            rotationZ = Quaternion.Euler(0f, 0f,touch.deltaPosition.x * rotationSpeedModifier);
            
         transform.position = new Vector3(
         //transform.position.x + touch.deltaPosition.x * movementSpeedModifier,   messing up movement
@@ -32,7 +32,7 @@ public class TouchRotation : MonoBehaviour
         transform.position.y+ touch.deltaPosition.y * movementSpeedModifier,
         transform.position.z );
         
-         transform.rotation = rotationY * transform.rotation;
+         transform.rotation = rotationZ * transform.rotation;
         }
 
 

@@ -31,7 +31,7 @@ public class NextSceneActivator : MonoBehaviour
         // Debug.Log(totalpages);
         // Debug.Log(PageText.pageToDisplay);  //This works
          currentpage= PageText.pageToDisplay;
-         if (currentpage == totalpages)
+         if (currentpage == totalpages && totalpages!=0 )
          {
             bool currentState = menuObject.activeSelf;
            // Debug.Log(currentState);

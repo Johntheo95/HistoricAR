@@ -23,4 +23,9 @@ public class StopAnimation : MonoBehaviour
     {
         AnimationObject.GetComponent<Animator>().enabled = false;
     }
+
+    public void StartTheAnimation()
+    {
+        AnimationObject.GetComponent<Animator>().enabled = true;
+    }
 }
