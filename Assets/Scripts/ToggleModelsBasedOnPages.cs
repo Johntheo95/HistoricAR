@@ -37,6 +37,7 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
          bool currentState  =  menuObject.activeSelf;
          bool currentState2 = menuObject2.activeSelf;
          bool currentState3 = menuObject3.activeSelf;
+         
          currentpage = PageText.pageToDisplay;
          // Text2 =GetComponent<TextMeshProUGUI>();
          
@@ -49,8 +50,23 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
             menuObject2.SetActive(!currentState2);
             menuObject3.SetActive(!currentState3);
             Text2.enabled = true;  
-        }
-      
+        }      
+}
+    public void ShowPreviousModel()
+{        
+         totalpages = PageText.textInfo.pageCount; 
+         bool currentState  =  menuObject.activeSelf;
+         bool currentState2 = menuObject2.activeSelf;
+         bool currentState3 = menuObject3.activeSelf;
+         currentpage = Text2.pageToDisplay;
+         // Text2 =GetComponent<TextMeshProUGUI>();
+         if (currentpage == TargetPage)
+         {  
+            menuObject.SetActive(!currentState);
+            menuObject2.SetActive(!currentState2);
+            menuObject3.SetActive(!currentState3);
+            Text2.enabled = false;  
+        }     
 }
 
 
@@ -66,9 +82,6 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
          
          if (currentpage == TargetPage)
          {
-           //Debug.Log("currentpage"+ currentpage);
-           //Debug.Log("menuObject"+ currentState);
-           //Debug.Log("menuObject2"+currentState2);
             menuObject.SetActive(!currentState);
             menuObject2.SetActive(!currentState2);
         }
@@ -77,11 +90,38 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
         {
             menuObject2.SetActive(!currentState2);
             menuObject3.SetActive(!currentState3);
-            menuObject4.SetActive(!currentState4);
-
+            menuObject4.SetActive(!currentState4);               
         }
+        if (currentpage == TargetPage2+2){
+                menuObject3.SetActive(!currentState3);
+                menuObject4.SetActive(!currentState4);
+                }
 }
 
+public void ShowPreviousModelVer2()
+{        
+         totalpages = PageText.textInfo.pageCount; 
+         bool currentState  =  menuObject.activeSelf;
+         bool currentState2 = menuObject2.activeSelf;
+         bool currentState3 = menuObject3.activeSelf;
+         bool currentState4 = menuObject4.activeSelf;
+         currentpage = PageText.pageToDisplay;
+         // Text2 =GetComponent<TextMeshProUGUI>();
+         
+         if (currentpage == TargetPage)
+         {
+            menuObject4.SetActive(!currentState4);
+            menuObject3.SetActive(!currentState3);
+            menuObject2.SetActive(!currentState2);
+        }
+
+        if (currentpage == TargetPage2)
+        {
+            menuObject2.SetActive(!currentState2);
+            menuObject.SetActive(!currentState);
+                           
+        }
+}
         
         public void ShowNextModelVer3()
 {        
@@ -95,9 +135,6 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
          
          if (currentpage == TargetPage)
          {
-           //Debug.Log("currentpage"+ currentpage);
-           //Debug.Log("menuObject"+ currentState);
-           //Debug.Log("menuObject2"+currentState2);
             menuObject.SetActive(!currentState);
             menuObject2.SetActive(!currentState2);
             menuObject3.SetActive(!currentState3);
@@ -125,9 +162,6 @@ public class ToggleModelsBasedOnPages : MonoBehaviour
          
          if (currentpage == TargetPage)
          {
-           //Debug.Log("currentpage"+ currentpage);
-           //Debug.Log("menuObject"+ currentState);
-           //Debug.Log("menuObject2"+currentState2);
             menuObject.SetActive(!currentState);
             menuObject2.SetActive(!currentState2);
             menuObject4.SetActive(!currentState4);

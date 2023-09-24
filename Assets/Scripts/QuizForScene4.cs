@@ -20,9 +20,9 @@ public class QuizForScene4 : MonoBehaviour
 
    
     private string[] Questions = {
-        "Με τον ορό «πύρρεια νίκη» αναφερόμαστε σε νίκη με",
+        "Με τον όρο «πύρρεια νίκη» αναφερόμαστε σε νίκη με",
         "Γιατί ο Πύρρος  δεν πολιόρκησε την Ρωμη",
-        "Ο Πυρρός  κατάφερε να νικήσει σε όλες  τις μάχες στην Ιταλία.",
+        "Ο Πύρρος  κατάφερε να νικήσει σε όλες  τις μάχες στην Ιταλία.",
         "Η εκστρατεία του Πυρρού προς την Σπαρτή στέφτηκε με επιτυχία.",
         "Η τελευταία μάχη του Πυρρού ήταν στο Άργος όπου και σκοτώθηκε."
     };
@@ -30,9 +30,9 @@ public class QuizForScene4 : MonoBehaviour
     private string[,] AnswersOption = {
         {"Πολλές απώλειες","Μεγάλη ευκολία"},
         {"Μεγάλη απόσταση","Ελλιπείς δυνάμεις"},
-        {"Σωστό1","Λάθος1"},
-        {"Σωστό2","Λάθος2"},
-        {"Σωστό3","Λάθος3"}
+        {"Σωστό","Λάθος"},
+        {"Σωστό","Λάθος"},
+        {"Σωστό","Λάθος"}
         
     };
     private int[] Answer = {
@@ -84,8 +84,8 @@ public class QuizForScene4 : MonoBehaviour
                 }
 
         if(j == 5 ){
-        CorrectNumAnswersTXT.text = "ΟΙ σωστες απαντησεις απο το Quiz του κεφαλαιου ηταν: "+ correctanwser + 
-                                    "\nΚαι οι λανθασμένες ηταν: " + (Answer.Length-correctanwser);
+        CorrectNumAnswersTXT.text = "Οι σωστές απαντήσεις απο το  Quiz του κεφαλαίου ήταν "+ correctanwser + 
+                                    "\nΚαι οι λανθασμένες : " + (Answer.Length-correctanwser);
         QuestionPanel.SetActive(false);
         CanvasUI.SetActive(true);
         return;}
@@ -94,14 +94,13 @@ public class QuizForScene4 : MonoBehaviour
         
      }
 
-private void ShowTexts(){
+    private void ShowTexts(){
 
-    if (row< AnswersOption.GetLength(0)) {           
+        if (row< AnswersOption.GetLength(0)) {           
             ShowAnswersTXT.ForEach(TMPInButton => TMPInButton.text = AnswersOption[row, column++]);
             column = 0; row++;
             
             }
     QuestionPageTXT.text=Questions[questionrow++]; 
-}
-
+    }
 }

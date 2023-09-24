@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ionikos
+  - Dorikos
+  - Melanomorfos
+  - Eruthromorfo
   layers:
   - Default
   - TransparentFX

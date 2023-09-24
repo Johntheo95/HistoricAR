@@ -24,15 +24,15 @@ public class TouchRotation : MonoBehaviour
         touch = Input.GetTouch(0);
         if(touch.phase == TouchPhase.Moved)
         {
-            rotationZ = Quaternion.Euler(0f, 0f,touch.deltaPosition.x * rotationSpeedModifier);
+           // rotationZ = Quaternion.Euler(0f, 0f,touch.deltaPosition.x * rotationSpeedModifier);
            
         transform.position = new Vector3(
         //transform.position.x + touch.deltaPosition.x * movementSpeedModifier,   messing up movement
-        transform.position.x,
-        transform.position.y+ touch.deltaPosition.y * movementSpeedModifier,
+        transform.position.x + touch.deltaPosition.x * movementSpeedModifier,
+        transform.position.y + touch.deltaPosition.y * movementSpeedModifier,
         transform.position.z );
         
-         transform.rotation = rotationZ * transform.rotation;
+         //transform.rotation = rotationZ * transform.rotation;
         }
 
 
