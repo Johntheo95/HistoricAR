@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class BasedOnPageForScene2 : MonoBehaviour
@@ -81,8 +82,10 @@ public class BasedOnPageForScene2 : MonoBehaviour
 
 
             if (currentpage == TargetPage3) {
-            NextPageBTN.SetActive(false);
-            PrevPageBTN.SetActive(false);    
+            //NextPageBTN.SetActive(false);
+            //PrevPageBTN.SetActive(false);
+            NextPageBTN.GetComponent<Image>().enabled= false;
+            PrevPageBTN.GetComponent<Image>().enabled= false;     
             menuObject3.SetActive(!currentState3);
             menuObject4.SetActive(!currentState4);
             PromptAskQuesion.SetActive(!currentStateTXT);
@@ -100,8 +103,10 @@ public class BasedOnPageForScene2 : MonoBehaviour
                 
                 }
             if(currentpage == TargetPage5) {
-                NextPageBTN.SetActive(false);
-                PrevPageBTN.SetActive(false);
+                //NextPageBTN.SetActive(false);
+                //PrevPageBTN.SetActive(false);
+                NextPageBTN.GetComponent<Image>().enabled= false;
+                PrevPageBTN.GetComponent<Image>().enabled= false;
                 PromptAskQuesion.SetActive(!currentStateTXT);
                 PromptAskQuesion.GetComponent<TMP_Text>().text= "ΠΟΙΟ ΑΓΓΕΙΟ ΕΙΝΑΙ  ΤΟ ΕΡΥΘΡΟΜΟΡΦΟ;";
                 menuObject5.SetActive(!currentState5);
@@ -163,6 +168,7 @@ public class BasedOnPageForScene2 : MonoBehaviour
             NextPageBTN.SetActive(true);
             PrevPageBTN.SetActive(true);
             
+            
             }
             else if (currentpage == TargetPage4){
                 Result.SetActive(true);
@@ -186,8 +192,13 @@ public class BasedOnPageForScene2 : MonoBehaviour
                 PrevPageBTN.SetActive(true);
             }             
         }    
+    
+    
+    
     public void ShowTheAnswer(){
-       
+      
+       currentpage = PageText.pageToDisplay;
+       Debug.Log("Showmodel"+ currentpage);
         if(currentpage == TargetPage3){
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began){//    Input.GetMouseButtonDown(0)
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);//     Input.mousePosition
@@ -198,8 +209,10 @@ public class BasedOnPageForScene2 : MonoBehaviour
                     Result.SetActive(true);
                     Result.GetComponent<TMP_Text>().text= "ΣΩΣΤΟ";
                     Result.GetComponent<TMP_Text>().color = Color.green;
-                    NextPageBTN.SetActive(true);
-                    PrevPageBTN.SetActive(true);
+                    //NextPageBTN.SetActive(true);
+                   //PrevPageBTN.SetActive(true);
+                    NextPageBTN.GetComponent<Image>().enabled= false;
+                    PrevPageBTN.GetComponent<Image>().enabled= false;
 
                 }
                 else if( Physics.Raycast(ray, out hit) && (hit.collider.gameObject.CompareTag("Dorikos"))){
@@ -208,8 +221,10 @@ public class BasedOnPageForScene2 : MonoBehaviour
                     Result.SetActive(true);
                     Result.GetComponent<TMP_Text>().text= "ΛΑΘΟΣ";
                     Result.GetComponent<TMP_Text>().color = Color.red;
-                    NextPageBTN.SetActive(true);
-                    PrevPageBTN.SetActive(true);
+                    //NextPageBTN.SetActive(true);
+                    //PrevPageBTN.SetActive(true);
+                    NextPageBTN.GetComponent<Image>().enabled= true;
+                    PrevPageBTN.GetComponent<Image>().enabled= true;
                 }
 
             }
@@ -225,8 +240,10 @@ public class BasedOnPageForScene2 : MonoBehaviour
                         Result.SetActive(true);
                         Result.GetComponent<TMP_Text>().text= "ΛΑΘΟΣ";
                         Result.GetComponent<TMP_Text>().color = Color.red;
-                        NextPageBTN.SetActive(true);
-                        PrevPageBTN.SetActive(true);
+                        //NextPageBTN.SetActive(true);
+                        //PrevPageBTN.SetActive(true);
+                        NextPageBTN.GetComponent<Image>().enabled= true;
+                        PrevPageBTN.GetComponent<Image>().enabled= true;
                 }
 
                 if( Physics.Raycast(ray, out hit) && (hit.collider.gameObject.CompareTag("Eruthromorfo"))){
@@ -235,8 +252,10 @@ public class BasedOnPageForScene2 : MonoBehaviour
                         Result.SetActive(true);
                         Result.GetComponent<TMP_Text>().text= "ΣΩΣΤΟ";
                         Result.GetComponent<TMP_Text>().color = Color.green;
-                        NextPageBTN.SetActive(true);
-                        PrevPageBTN.SetActive(true);    
+                        //NextPageBTN.SetActive(true);
+                        //PrevPageBTN.SetActive(true);  
+                        NextPageBTN.GetComponent<Image>().enabled= true;
+                        PrevPageBTN.GetComponent<Image>().enabled= true;  
                 }  
             } 
         }   
