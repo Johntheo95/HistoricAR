@@ -211,8 +211,8 @@ public class BasedOnPageForScene2 : MonoBehaviour
                     Result.GetComponent<TMP_Text>().color = Color.green;
                     //NextPageBTN.SetActive(true);
                    //PrevPageBTN.SetActive(true);
-                    NextPageBTN.GetComponent<Image>().enabled= false;
-                    PrevPageBTN.GetComponent<Image>().enabled= false;
+                    NextPageBTN.GetComponent<Image>().enabled= true;
+                    PrevPageBTN.GetComponent<Image>().enabled= true;
 
                 }
                 else if( Physics.Raycast(ray, out hit) && (hit.collider.gameObject.CompareTag("Dorikos"))){
